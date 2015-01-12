@@ -1,0 +1,6 @@
+#!/bin/bash
+# Run a command and eat the output, gimme back by console
+# eg.   rbg gedit
+
+echo "Running $*"
+nohup $*  1> /dev/null 2>&1 &

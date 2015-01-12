@@ -1,0 +1,57 @@
+#!/bin/bash
+# Start working on the simple project
+
+# Vars
+export p=~/Projects/Photo
+export ph=ubuntu@54.200.88.175
+export port=8011
+export pa=$p/app
+export pb=$p/bin
+export pd=$p/doc
+export pt=$p/test
+export x=~/Projects/Photo
+
+# Aliases
+alias proot="cd $p"
+alias papp="cd $pa"
+alias pdata="cd $pa/data/"
+alias photo='cd $pa/data/photos; ls -l'
+alias pbin="cd $pb"
+alias pdoc="cd $pd"
+alias ptest="cd $pt"
+alias pscript="cd $pa/scripts"
+
+alias b='popd && clear && ls'
+alias u='cd .. && clear && ls'
+alias h='history|tail -30'
+alias tres='tresults'
+alias s='search'
+alias g='grep'
+alias gv='grep -v'
+function d { pushd "$1";clear;ls; }
+
+# Path
+export _OLD_VIRTUAL_PATH=\
+$pb:\
+$pt:\
+/usr/bin:\
+/sbin:\
+/bin:\
+~/bin:\
+.
+
+# Directory
+cd $p
+h=`hostname|sed 's/\./\\n/' | sed 's/\-/\\n/'`
+figlet "$h
+Server" #> $p/bin/welcome
+cat $p/bin/welcome
+
+# Use virtualenv
+[ 'i247a' == `hostname` ] &&  . $p/env/bin/activate
+echo "python = `which python`"
+echo 
+path
+
+# Status
+

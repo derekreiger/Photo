@@ -1,0 +1,10 @@
+#!/bin/bash
+# Find a command that is an alias or a shell script
+
+cmd=`which $1`
+if [ "$cmd" != "" ] ; then
+    echo "Contents of $cmd:"
+    cat $cmd
+else
+    grep "alias\ $1=" ~/bin/bash-alias
+fi

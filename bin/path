@@ -1,0 +1,4 @@
+#!/bin/bash
+# List the path in readable form
+
+echo $PATH | perl -pe s/:/\\n/g

@@ -1,0 +1,14 @@
+#!/bin/bash
+# Run the code to demo this project
+
+# Kill the old server
+x=`ps -ef | grep -v grep | grep runserver | awk '{ print $2 }'`
+[ ! -z "$x" ] && echo kill $x && kill $x
+
+# Run the server
+cd $p/app
+rbg manage.py runserver $port
+sleep 2
+
+# Display the page
+rbg firefox localhost:$port/$1
