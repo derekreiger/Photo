@@ -1,0 +1,2 @@
+cd $p/mysite
+django-admin.py startapp photo

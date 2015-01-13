@@ -1,1 +1,2 @@
+cd $p/mysite
 python manage.py syncdb

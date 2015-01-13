@@ -1,0 +1,10 @@
+#!/bin/bash
+# Install the Python Image Library (Pillow)
+
+sudo apt-get install -y python-dev
+sudo apt-get install -y libjpeg-dev zlib1g-dev libpng12-dev
+
+pip install -I pillow
+
+echo 'test with:'
+echo '    resize some-image'

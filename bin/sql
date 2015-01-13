@@ -1,0 +1,2 @@
+cd $p/mysite
+python manage.py sql photo

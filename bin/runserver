@@ -1,1 +1,5 @@
-python manage.py runserver
+#!/bin/bash
+
+# Run the server
+cd $p/mysite
+manage.py runserver $port
